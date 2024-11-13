@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Configuración de Endpoints de API</title>
+    <script src="./response/js/app.js"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container mt-5">
+        <h2 class="mb-4">Configuración de Endpoints de API</h2>
+        
+        <form id="apiConfigForm" method="get" action="./response/reponseApi.html">
+            <div class="form-group">
+                <label for="baseUrl">Base URL</label>
+                <input type="text" class="form-control" id="baseUrl" name="baseUrl" placeholder="Introduce la URL base (p. ej., http://localhost:8080)" required pattern="https?://.+" title="Debe ser una URL válida que comience con http o https">
+            </div>
+            
+            <div class="form-group">
+                <label for="getAllEndpoint">Endpoint de obtener todos</label>
+                <input type="text" class="form-control" id="getAllEndpoint" name="getAllEndpoint" placeholder="/api/v1/products/" required pattern="^/.+" title="Debe comenzar con /">
+            </div>
+            
+            <div class="form-group">
+                <label for="insertEndpoint">Endpoint de insertar</label>
+                <input type="text" class="form-control" id="insertEndpoint" name="insertEndpoint" placeholder="/api/v1/products/insert/" required pattern="^/.+" title="Debe comenzar con /">
+            </div>
+            
+            <div class="form-group">
+                <label for="editEndpoint">Endpoint de editar</label>
+                <input type="text" class="form-control" id="editEndpoint" name="editEndpoint" placeholder="/api/v1/products/edit/{id}" required pattern="^/.+" title="Debe comenzar con /">
+            </div>
+            
+            <div class="form-group">
+                <label for="deleteEndpoint">Endpoint de eliminar</label>
+                <input type="text" class="form-control" id="deleteEndpoint" name="deleteEndpoint" placeholder="/api/v1/products/delete/{id}" required pattern="^/.+" title="Debe comenzar con /">
+            </div>
+            
+            <button type="submit" class="btn btn-primary">Guardar configuración</button>
+        </form>
+        <hr>
+        
+    </div>
+</body>
+</html>
